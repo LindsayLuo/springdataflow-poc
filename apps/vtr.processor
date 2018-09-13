@@ -1,1 +1,1 @@
-processor.vtr-delegate=file://root/apps/vtr-delegates-account-service-0.0.2.jar
+processor.vtr-delegates-account-service=file://root/apps/vtr-delegates-account-service-0.0.2.jar

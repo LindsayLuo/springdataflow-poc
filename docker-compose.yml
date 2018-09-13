@@ -43,5 +43,7 @@ services:
         wget -qO- 'http://dataflow-server:9393/apps' --post-data='uri=file:///root/apps/spring-cloud-task-app-descriptor-Clark.RELEASE.task-apps-maven&force=true';
         echo 'Task apps imported'
         wget -qO- 'http://dataflow-server:9393/apps' --post-data='uri=file:///root/apps/vtr.processor&force=true';
-        echo 'VTR procssor imported'"
+        echo 'VTR procssor imported'
+        wget -qO- 'http://dataflow-server:9393/streams/definitions?deploy=true' --post-data='name=vtr&definition=time+--time-unit=SECONDS+--fixed-delay=10+|+vtr-delegates-account-service+|+log';
+        echo 'VTR stream imported'"
 
